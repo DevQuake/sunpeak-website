@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SunPeak Energy Solutions — Arizona's trusted residential solar installer. Cut your electricity bill by up to 80%. Book a free solar consultation today." />
+  <title>SunPeak Energy Solutions | Phoenix Solar Installation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" role="banner">
+    <div class="navbar__inner container">
+      <a href="#home" class="navbar__logo" aria-label="SunPeak Energy Solutions — home">
+        <img src="assets/SunPeak_Energy_Solutions_logo.png" alt="SunPeak Energy Solutions logo" width="160" height="50" />
+      </a>
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <ul class="navbar__links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#financing">Financing</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#booking">Book Now</a></li>
+        </ul>
+      </nav>
+      <a href="#booking" class="btn btn--primary navbar__cta">Book Free Consultation</a>
+      <button class="navbar__hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU OVERLAY ===== -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="mobile-menu__close" aria-label="Close navigation menu">&times;</button>
+    <ul class="mobile-menu__links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#financing">Financing</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#booking">Book Now</a></li>
+    </ul>
+    <a href="#booking" class="btn btn--primary mobile-menu__cta">Book Free Consultation</a>
+  </div>
+  <div class="mobile-menu__overlay" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__sun" aria-hidden="true"></div>
+      <div class="container hero__content fade-in">
+        <h1 id="hero-heading" class="hero__headline">Power Your Home.<br />Own Your Energy.</h1>
+        <p class="hero__subheadline">Arizona's trusted residential solar installer. Cut your electricity bill by up to 80% — starting with a free solar assessment.</p>
+        <div class="hero__actions">
+          <a href="#booking" class="btn btn--primary btn--lg">Book Free Consultation</a>
+          <a href="#how-it-works" class="btn btn--outline btn--lg">See How It Works</a>
+        </div>
+        <div class="hero__badges">
+          <div class="hero__badge"><span class="hero__badge-icon">⚡</span> 500+ Homes Installed</div>
+          <div class="hero__badge"><span class="hero__badge-icon">☀️</span> Phoenix's #1 Solar Installer</div>
+          <div class="hero__badge"><span class="hero__badge-icon">🏆</span> 30% Federal Tax Credit Available</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SAVINGS CALCULATOR ===== -->
+    <section id="calculator" class="calculator section" aria-labelledby="calc-heading">
+      <div class="container">
+        <div class="section__label">Savings Estimator</div>
+        <h2 id="calc-heading" class="section__heading fade-in">See How Much You Could Save</h2>
+        <p class="section__subheading fade-in">Slide to your monthly bill and see your estimated solar savings instantly.</p>
+        <div class="calc__card fade-in">
+          <div class="calc__inputs">
+            <div class="calc__field">
+              <label for="bill-slider" class="calc__label">
+                Monthly Electricity Bill: <strong id="bill-display" class="calc__bill-display">$150</strong>
+              </label>
+              <input type="range" id="bill-slider" class="calc__slider" min="50" max="600" value="150" step="10" aria-label="Monthly electricity bill amount" />
+              <div class="calc__slider-ticks">
+                <span>$50</span><span>$200</span><span>$400</span><span>$600</span>
+              </div>
+            </div>
+            <div class="calc__field">
+              <label for="home-size" class="calc__label">Home Size</label>
+              <select id="home-size" class="calc__select" aria-label="Home size">
+                <option value="0.85">Small (&lt;1,500 sq ft)</option>
+                <option value="1.00" selected>Medium (1,500–2,500 sq ft)</option>
+                <option value="1.20">Large (&gt;2,500 sq ft)</option>
+              </select>
+            </div>
+          </div>
+          <div class="calc__results">
+            <div class="calc__result-card">
+              <div class="calc__result-icon">💰</div>
+              <div class="calc__result-label">Estimated Annual Savings</div>
+              <div class="calc__result-value" id="annual-savings" aria-live="polite">$1,170</div>
+            </div>
+            <div class="calc__divider" aria-hidden="true"></div>
+            <div class="calc__result-card">
+              <div class="calc__result-icon">📅</div>
+              <div class="calc__result-label">Estimated Payback Period</div>
+              <div class="calc__result-value" id="payback-period" aria-live="polite">10.3 yrs</div>
+            </div>
+            <div class="calc__divider" aria-hidden="true"></div>
+            <div class="calc__result-card">
+              <div class="calc__result-icon">🌱</div>
+              <div class="calc__result-label">25-Year Lifetime Savings</div>
+              <div class="calc__result-value" id="lifetime-savings" aria-live="polite">$29,250</div>
+            </div>
+          </div>
+          <div class="calc__disclaimer">* Estimates based on typical Arizona solar performance. Actual savings vary by home and usage.</div>
+          <a href="#booking" class="btn btn--primary btn--lg calc__cta">Get Your Custom Solar Report — It's Free</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="services section section--alt" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section__label">What We Do</div>
+        <h2 id="services-heading" class="section__heading fade-in">Complete Solar Solutions, End to End</h2>
+        <p class="section__subheading fade-in">From installation to monitoring, we handle every step of your solar journey.</p>
+        <div class="services__grid">
+          <article class="service-card fade-in">
+            <div class="service-card__icon" aria-hidden="true">🏠</div>
+            <h3 class="service-card__title">Residential Solar Installation</h3>
+            <p class="service-card__desc">Custom panel systems designed for your roof and usage to cut bills and boost home value.</p>
+          </article>
+          <article class="service-card fade-in">
+            <div class="service-card__icon" aria-hidden="true">🔋</div>
+            <h3 class="service-card__title">Solar Battery Storage</h3>
+            <p class="service-card__desc">Tesla Powerwall &amp; Enphase batteries for nighttime use and outage backup power.</p>
+          </article>
+          <article class="service-card fade-in">
+            <div class="service-card__icon" aria-hidden="true">⚡</div>
+            <h3 class="service-card__title">Solar Panel Upgrades</h3>
+            <p class="service-card__desc">Replace older systems with high-efficiency monocrystalline panels for maximum output.</p>
+          </article>
+          <article class="service-card fade-in">
+            <div class="service-card__icon" aria-hidden="true">📱</div>
+            <h3 class="service-card__title">Solar System Monitoring</h3>
+            <p class="service-card__desc">Remote performance tracking via mobile app so you're always in control of your energy.</p>
+          </article>
+          <article class="service-card fade-in">
+            <div class="service-card__icon" aria-hidden="true">💳</div>
+            <h3 class="service-card__title">Solar Financing Assistance</h3>
+            <p class="service-card__desc">Loans, leases, and cash purchase options tailored to your financial goals.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="how-it-works" class="how section" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section__label">Our Process</div>
+        <h2 id="how-heading" class="section__heading fade-in">From Assessment to Activation in 5 Simple Steps</h2>
+        <p class="section__subheading fade-in">Going solar is easier than you think. Here's exactly what to expect.</p>
+        <div class="how__timeline">
+          <div class="how__step fade-in">
+            <div class="how__step-number" aria-hidden="true">1</div>
+            <div class="how__step-content">
+              <h3 class="how__step-title">Submit Your Address &amp; Bill</h3>
+              <p class="how__step-desc">Fill out our quick form with your home details and current electricity bill.</p>
+            </div>
+            <div class="how__connector" aria-hidden="true"></div>
+          </div>
+          <div class="how__step fade-in">
+            <div class="how__step-number" aria-hidden="true">2</div>
+            <div class="how__step-content">
+              <h3 class="how__step-title">Get Your Savings Report</h3>
+              <p class="how__step-desc">We generate a personalized solar savings estimate for your specific home and usage.</p>
+            </div>
+            <div class="how__connector" aria-hidden="true"></div>
+          </div>
+          <div class="how__step fade-in">
+            <div class="how__step-number" aria-hidden="true">3</div>
+            <div class="how__step-content">
+              <h3 class="how__step-title">Book a Free Consultation</h3>
+              <p class="how__step-desc">Meet with a solar advisor — no pressure, no obligation, just answers to your questions.</p>
+            </div>
+            <div class="how__connector" aria-hidden="true"></div>
+          </div>
+          <div class="how__step fade-in">
+            <div class="how__step-number" aria-hidden="true">4</div>
+            <div class="how__step-content">
+              <h3 class="how__step-title">Solar Assessment &amp; Design</h3>
+              <p class="how__step-desc">Our engineers design a custom system optimized for your roof and energy needs.</p>
+            </div>
+            <div class="how__connector" aria-hidden="true"></div>
+          </div>
+          <div class="how__step fade-in">
+            <div class="how__step-number" aria-hidden="true">5</div>
+            <div class="how__step-content">
+              <h3 class="how__step-title">Installation &amp; Activation</h3>
+              <p class="how__step-desc">Our certified team installs your system in 1–2 days. We handle all permits and inspections.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FINANCING ===== -->
+    <section id="financing" class="financing section section--alt" aria-labelledby="financing-heading">
+      <div class="container">
+        <div class="section__label">Financing Options</div>
+        <h2 id="financing-heading" class="section__heading fade-in">Flexible Financing. No Excuses Not to Go Solar.</h2>
+        <p class="section__subheading fade-in">Choose the payment option that fits your life — we'll help you maximize every dollar.</p>
+        <div class="financing__banner fade-in" role="note">
+          <span class="financing__banner-icon" aria-hidden="true">🏛️</span>
+          <div>
+            <strong>Federal Solar Tax Credit</strong> — Save up to 30% on your installation cost through the Residential Clean Energy Credit.
+          </div>
+          <a href="#booking" class="btn btn--white btn--sm">Claim Your Credit</a>
+        </div>
+        <div class="financing__grid">
+          <article class="financing-card fade-in">
+            <div class="financing-card__icon" aria-hidden="true">🏦</div>
+            <h3 class="financing-card__title">Solar Loan</h3>
+            <div class="financing-card__tag">Most Popular</div>
+            <p class="financing-card__desc">$0 down, own your system from day one, and maximize your long-term savings with full tax credit eligibility.</p>
+            <ul class="financing-card__perks">
+              <li>✓ $0 down payment</li>
+              <li>✓ Own your system</li>
+              <li>✓ Full tax credit benefit</li>
+            </ul>
+            <a href="#booking" class="btn btn--primary btn--block">Get Started</a>
+          </article>
+          <article class="financing-card fade-in">
+            <div class="financing-card__icon" aria-hidden="true">💵</div>
+            <h3 class="financing-card__title">Cash Purchase</h3>
+            <div class="financing-card__tag financing-card__tag--green">Best ROI</div>
+            <p class="financing-card__desc">Pay upfront and enjoy the highest long-term savings with no monthly payments and maximum home value increase.</p>
+            <ul class="financing-card__perks">
+              <li>✓ No monthly payments</li>
+              <li>✓ Maximum lifetime savings</li>
+              <li>✓ Instant home value boost</li>
+            </ul>
+            <a href="#booking" class="btn btn--primary btn--block">Get Started</a>
+          </article>
+          <article class="financing-card fade-in">
+            <div class="financing-card__icon" aria-hidden="true">📋</div>
+            <h3 class="financing-card__title">Solar Lease</h3>
+            <div class="financing-card__tag financing-card__tag--blue">Low Entry Cost</div>
+            <p class="financing-card__desc">Low fixed monthly payments with no upfront cost. Great for homeowners who want immediate savings with minimal commitment.</p>
+            <ul class="financing-card__perks">
+              <li>✓ No upfront cost</li>
+              <li>✓ Predictable monthly payment</li>
+              <li>✓ Maintenance included</li>
+            </ul>
+            <a href="#booking" class="btn btn--primary btn--block">Get Started</a>
+          </article>
+        </div>
+        <div class="financing__cta fade-in">
+          <a href="#booking" class="btn btn--primary btn--lg">Talk to a Financing Specialist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonials" class="testimonials section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section__label">Customer Stories</div>
+        <h2 id="testimonials-heading" class="section__heading fade-in">Real Homeowners. Real Savings.</h2>
+        <p class="section__subheading fade-in">Don't take our word for it — hear from Arizona families who made the switch.</p>
+        <div class="testimonials__grid">
+          <article class="testimonial-card fade-in">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <blockquote class="testimonial-card__quote">
+              "SunPeak installed our solar system in just two days. Our electric bill dropped by more than 70%. The whole team was professional, clean, and respectful of our home. Highly recommended."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">SM</div>
+              <div>
+                <div class="testimonial-card__name">Sarah Mitchell</div>
+                <div class="testimonial-card__location">Phoenix, AZ</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card fade-in">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <blockquote class="testimonial-card__quote">
+              "The team explained everything clearly and handled all the permits. The installation was smooth and professional. I wish I had done this sooner — the savings are incredible."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">DT</div>
+              <div>
+                <div class="testimonial-card__name">Daniel Torres</div>
+                <div class="testimonial-card__location">Mesa, AZ</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card fade-in">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <blockquote class="testimonial-card__quote">
+              "Our solar panels paid for themselves faster than expected. Best investment we've made for our home. SunPeak's monitoring app makes it easy to track everything in real time."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">KA</div>
+              <div>
+                <div class="testimonial-card__name">Kevin Anderson</div>
+                <div class="testimonial-card__location">Scottsdale, AZ</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="faq section section--alt" aria-labelledby="faq-heading">
+      <div class="container faq__container">
+        <div class="section__label">FAQ</div>
+        <h2 id="faq-heading" class="section__heading fade-in">Common Questions, Straight Answers</h2>
+        <p class="section__subheading fade-in">Everything you need to know before going solar.</p>
+        <div class="faq__list fade-in" role="list">
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-1">
+              How much can I save with solar?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-1" hidden>
+              <p>Most homeowners in Arizona reduce their electricity costs by 50–80% depending on system size, energy usage, and available sunlight. Phoenix's 300+ sunny days per year makes it one of the best locations in the US for solar.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-2">
+              How long does installation take?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-2" hidden>
+              <p>Most residential installations are completed within 1–2 days after permits are approved. The permitting process typically takes 2–6 weeks depending on your city or HOA requirements. We handle all of the paperwork for you.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-3">
+              What happens during cloudy days?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-3" hidden>
+              <p>Solar systems still produce energy during overcast and cloudy conditions, just at reduced efficiency (typically 10–25% of peak output). In Arizona, this is rarely a concern given our average of 299 sunny days per year. Battery storage options can further protect against any gaps.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-4">
+              Do solar panels require maintenance?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-4" hidden>
+              <p>Solar panels are extremely low-maintenance and designed to last 25+ years. We recommend an occasional rinse with water to remove dust and debris — especially important in Arizona. Our monitoring app alerts you if performance drops unexpectedly.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-5">
+              What areas do you serve?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-5" hidden>
+              <p>We currently serve the greater Phoenix metropolitan area, including: Phoenix, Scottsdale, Tempe, Mesa, Chandler, Glendale, and Peoria. Not sure if we cover your area? Give us a call at (602) 555-0187.</p>
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq-6">
+              Is there a federal tax credit?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__answer" id="faq-6" hidden>
+              <p>Yes. Under the Residential Clean Energy Credit, homeowners can claim up to 30% of their total installation cost as a federal tax credit. For example, a $20,000 system would earn a $6,000 tax credit. This applies to systems installed through at least 2032. Our team will walk you through the process.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BOOKING FORM ===== -->
+    <section id="booking" class="booking section" aria-labelledby="booking-heading">
+      <div class="container booking__container">
+        <div class="booking__header fade-in">
+          <div class="section__label">Free Consultation</div>
+          <h2 id="booking-heading" class="section__heading">Book Your Free Solar Consultation</h2>
+          <p class="section__subheading">No pressure. No obligation. Just a free personalized solar savings report for your home.</p>
+        </div>
+        <div class="booking__card fade-in">
+          <form id="booking-form" class="booking__form" novalidate aria-label="Solar consultation booking form">
+            <div class="form__row form__row--2">
+              <div class="form__group">
+                <label for="full-name" class="form__label">Full Name <span class="form__required" aria-hidden="true">*</span></label>
+                <input type="text" id="full-name" name="fullName" class="form__input" placeholder="Jane Smith" required autocomplete="name" aria-required="true" />
+                <span class="form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form__group">
+                <label for="email" class="form__label">Email Address <span class="form__required" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" class="form__input" placeholder="jane@example.com" required autocomplete="email" aria-required="true" />
+                <span class="form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form__row form__row--2">
+              <div class="form__group">
+                <label for="phone" class="form__label">Phone Number <span class="form__required" aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" class="form__input" placeholder="(602) 555-0100" required autocomplete="tel" aria-required="true" />
+                <span class="form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form__group">
+                <label for="address" class="form__label">Home Address <span class="form__required" aria-hidden="true">*</span></label>
+                <input type="text" id="address" name="address" class="form__input" placeholder="123 Main St, Phoenix, AZ" required autocomplete="street-address" aria-required="true" />
+                <span class="form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="monthly-bill" class="form__label">Monthly Electricity Bill <span class="form__required" aria-hidden="true">*</span></label>
+                <select id="monthly-bill" name="monthlyBill" class="form__select" required aria-required="true">
+                  <option value="" disabled selected>Select your average bill</option>
+                  <option value="under100">Under $100</option>
+                  <option value="100-200">$100 – $200</option>
+                  <option value="200-350">$200 – $350</option>
+                  <option value="350-500">$350 – $500</option>
+                  <option value="over500">Over $500</option>
+                </select>
+                <span class="form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form__row form__row--2">
+              <fieldset class="form__fieldset">
+                <legend class="form__label">Home Ownership <span class="form__required" aria-hidden="true">*</span></legend>
+                <div class="form__radios">
+                  <label class="form__radio-label">
+                    <input type="radio" name="ownership" value="own" required aria-required="true" /> Own
+                  </label>
+                  <label class="form__radio-label">
+                    <input type="radio" name="ownership" value="rent" /> Rent
+                  </label>
+                </div>
+                <span class="form__error" role="alert" aria-live="polite" id="ownership-error"></span>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <legend class="form__label">Preferred Contact Method <span class="form__required" aria-hidden="true">*</span></legend>
+                <div class="form__radios">
+                  <label class="form__radio-label">
+                    <input type="radio" name="contactMethod" value="phone" required aria-required="true" /> Phone
+                  </label>
+                  <label class="form__radio-label">
+                    <input type="radio" name="contactMethod" value="email" /> Email
+                  </label>
+                  <label class="form__radio-label">
+                    <input type="radio" name="contactMethod" value="either" /> Either
+                  </label>
+                </div>
+                <span class="form__error" role="alert" aria-live="polite" id="contact-error"></span>
+              </fieldset>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="message" class="form__label">Message / Notes <span class="form__optional">(optional)</span></label>
+                <textarea id="message" name="message" class="form__textarea" rows="4" placeholder="Any questions or specific concerns about going solar..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg btn--block form__submit">
+              Get My Free Solar Report
+            </button>
+            <p class="form__privacy">🔒 Your information is private and will never be shared or sold.</p>
+          </form>
+
+          <!-- Success State -->
+          <div class="booking__success" id="booking-success" hidden aria-live="polite" role="status">
+            <div class="booking__success-icon" aria-hidden="true">☀️</div>
+            <h3 class="booking__success-title">You're on your way to solar savings!</h3>
+            <p class="booking__success-msg" id="success-message">Thanks! We'll reach out within 1 business day to schedule your free consultation.</p>
+            <p class="booking__success-sub">Questions in the meantime? Call us at <a href="tel:6025550187">(602) 555-0187</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="assets/SunPeak_Energy_Solutions_logo.png" alt="SunPeak Energy Solutions" width="140" height="44" loading="lazy" />
+          <p class="footer__tagline">Power Your Home. Own Your Energy.</p>
+          <p class="footer__blurb">Arizona's trusted residential solar partner since day one. Licensed, insured, and dedicated to your long-term savings.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#financing">Financing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#booking">Book Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-heading">Our Services</h4>
+          <ul class="footer__links">
+            <li><a href="#services">Residential Solar Installation</a></li>
+            <li><a href="#services">Solar Battery Storage</a></li>
+            <li><a href="#services">Solar Panel Upgrades</a></li>
+            <li><a href="#services">Solar System Monitoring</a></li>
+            <li><a href="#services">Financing Assistance</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-heading">Contact Us</h4>
+          <address class="footer__contact">
+            <a href="tel:6025550187" class="footer__contact-item">
+              <span aria-hidden="true">📞</span> (602) 555-0187
+            </a>
+            <a href="mailto:hello@sunpeakenergy.com" class="footer__contact-item">
+              <span aria-hidden="true">✉️</span> hello@sunpeakenergy.com
+            </a>
+            <div class="footer__contact-item">
+              <span aria-hidden="true">📍</span>
+              2437 E Camelback Rd, Suite 110<br />Phoenix, AZ 85016
+            </div>
+            <div class="footer__contact-item">
+              <span aria-hidden="true">🕐</span>
+              Mon–Fri: 8AM–6PM<br />Sat: 9AM–4PM | Sun: Closed
+            </div>
+          </address>
+          <div class="footer__areas">
+            <h4 class="footer__col-heading">Service Areas</h4>
+            <p>Phoenix · Scottsdale · Tempe · Mesa · Chandler · Glendale · Peoria</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 SunPeak Energy Solutions. All rights reserved.</p>
+        <p class="footer__legal">Licensed Solar Contractor | ROC #123456 | Serving the Greater Phoenix Metro Area</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE STICKY CTA BAR ===== -->
+  <div class="mobile-cta-bar" aria-label="Quick actions">
+    <a href="tel:6025550187" class="mobile-cta-bar__btn mobile-cta-bar__btn--call">
+      <span aria-hidden="true">📞</span> Call Now
+    </a>
+    <a href="#booking" class="mobile-cta-bar__btn mobile-cta-bar__btn--book">
+      <span aria-hidden="true">📅</span> Book Free Consult
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
